@@ -1,0 +1,12 @@
+---
+- name: Install dependencies
+  dnf: 
+    name: 
+      - '@Development Tools'
+      - '@Development Libraries'
+
+- git:
+    repo: https://github.com/theforeman/foreman.git
+    dest: /opt/foreman
+    version: {{ foreman_version }}
+
